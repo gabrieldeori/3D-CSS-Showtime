@@ -1,3 +1,7 @@
+:root {
+  --rotateSpeed: 30s
+}
+
 body {
   align-items: center;
   background-color: black;
@@ -5,22 +9,30 @@ body {
   font-size: 75px;
   justify-content: center;
   min-height: 100vh;
+  perspective: 10em;
+  perspective-origin: 50% calc(50% - 2em);
 }
 
 .scene {
+  animation: sceneRotation var(--rotateSpeed) infinite linear;
   position: relative;
-  perspective: 10em;
-  perspective-origin: 50% calc(50% - 2em);
   transform-style: preserve-3d;
 }
 
+@keyframes sceneRotation {
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
 .ball {
-  background-color: white;
+  animation: sceneRotation var(--rotateSpeed) infinite linear reverse;
+  background-color: rgba(0, 255, 255, 1);
   background-image: radial-gradient(
     circle at top,
-    white 15%,
+    rgb(255, 255, 255, 1) 15%,
     50%,
-    black 90%
+    rgb(0, 12, 12, 0.92) 80%
   );
   border-radius: 50%;
   bottom: 1em;
@@ -117,5 +129,4 @@ translateZ sempre é 1em.
   top: 1em;
   transform: translate(-50%, -50%) rotateX(90deg);
   width: 15em;
-  transform-style: preserve-3d;
 }
