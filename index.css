@@ -77,12 +77,14 @@ translateZ sempre é 1em.
 }
 
 .floor {
-  background-image: repeating-conic-gradient(
-    from 45deg,
-    #111 0 90deg,
-    #222 90deg 180deg
-  );
-  background-size: 1em 1em;
+  background-image:
+    radial-gradient(#5552, #000 60%),
+    repeating-conic-gradient(
+      from 45deg,
+      #111 0 90deg,
+      #222 90deg 180deg
+    );
+  background-size: 100%, 1em 1em;
   height: 15em;
   position: absolute;
   top: 1em;
