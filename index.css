@@ -18,3 +18,9 @@ main {
   height: 1em;
   width: 1em;
 }
+
+.cube {
+  background-color: rgba(0, 255, 255, 0.5);
+  height: 3em;
+  width: 3em;
+}
