@@ -1,5 +1,8 @@
 :root {
-  --rotateSpeed: 30s
+
+  --rotateSpeed: 30s;
+  --bounceSpeed: 1.5s;
+  --blueBox: rgba(0, 255, 255, 1);
 }
 
 body {
@@ -27,7 +30,7 @@ body {
 
 .ball {
   animation: sceneRotation var(--rotateSpeed) infinite linear reverse;
-  background-color: rgba(0, 255, 255, 1);
+  background-color: var(--blueBox);
   background-image: radial-gradient(
     circle at top,
     rgb(255, 255, 255, 1) 15%,
@@ -43,13 +46,26 @@ body {
   transform-style: preserve-3d;
 }
 
-.ball__shadow {
-  background-image: radial-gradient(
-    #000a, #0000 50%
-  );
-  height: 100%;
-  position: absolute;
-  width: 100%;
+@keyframes ballBounce {
+  0%, 100% {
+    bottom: 1em;
+  }
+  50% {
+    animation-timing-function: ease-in;
+    bottom: 3em;
+  }
+}
+
+
+
+@keyframes bounceShadow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: scale(2);
+  }
 }
 
 .cube {
@@ -62,7 +78,7 @@ body {
 }
 
 .cube .left, .cube .right, .cube .front, .cube .back {
-  background-color: rgba(0, 255, 255, 0.5);
+  background-color: var(--blueBox);
   box-shadow: 0 0 0.5em #000 inset;
   height: 100%;
   position: absolute;
@@ -97,7 +113,7 @@ translateZ sempre é 1em.
 }
 
 .cube .top {
-  background-color: rgba(0, 255, 255, 0.5);
+  background-color: var(--blueBox);
   box-shadow: 0 0 0.5em #000 inset;
   height: 2em;
   position: absolute;
