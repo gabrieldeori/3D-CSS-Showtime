@@ -1,7 +1,7 @@
 :root {
 
   --rotateSpeed: 30s;
-  --bounceSpeed: 0.75s;
+  --bounceSpeed: 1.25s;
   --blueBox: rgba(0, 255, 255, 0.75);
 }
 
@@ -35,9 +35,8 @@ body {
   background-color: var(--blueBox);
   background-image: radial-gradient(
     circle at top,
-    rgb(255, 255, 255, 1) 15%,
-    50%,
-    rgb(0, 12, 12, 0.92) 80%
+    white,
+    black
   );
   border-radius: 50%;
   bottom: 1em;
