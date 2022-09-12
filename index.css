@@ -5,6 +5,11 @@
   --blueBox: rgba(0, 255, 255, 0.75);
 }
 
+html {
+  height: 100%;
+  caret-color: transparent;
+}
+
 body {
   align-items: center;
   background-color: black;
@@ -32,7 +37,7 @@ body {
   animation:
     ballBounce var(--bounceSpeed) infinite ease-out,
     sceneRotation var(--rotateSpeed) infinite linear reverse;
-  background-color: var(--blueBox);
+  background-color: white;
   background-image: radial-gradient(
     circle at top,
     white,
