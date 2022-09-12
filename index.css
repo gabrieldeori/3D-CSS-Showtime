@@ -2,7 +2,7 @@
 
   --rotateSpeed: 30s;
   --bounceSpeed: 1.5s;
-  --blueBox: rgba(0, 255, 255, 1);
+  --blueBox: rgba(0, 255, 255, 0.5);
 }
 
 body {
@@ -12,8 +12,8 @@ body {
   font-size: 75px;
   justify-content: center;
   min-height: 100vh;
-  perspective: 10em;
-  perspective-origin: 50% calc(50% - 2em);
+  perspective: 15em;
+  perspective-origin: 50% calc(50% - 5em);
 }
 
 .scene {
@@ -29,7 +29,9 @@ body {
 }
 
 .ball {
-  animation: sceneRotation var(--rotateSpeed) infinite linear reverse;
+  animation:
+    ballBounce var(--bounceSpeed) infinite ease-out,
+    sceneRotation var(--rotateSpeed) infinite linear reverse;
   background-color: var(--blueBox);
   background-image: radial-gradient(
     circle at top,
@@ -48,7 +50,7 @@ body {
 
 @keyframes ballBounce {
   0%, 100% {
-    bottom: 1em;
+    bottom: 0.5em;
   }
   50% {
     animation-timing-function: ease-in;
@@ -56,15 +58,26 @@ body {
   }
 }
 
+.ball__shadow {
+  background-image: radial-gradient(
+    #000a, #0000 50%
+  );
+  height: 100%;
+  position: absolute;
+  width: 100%;
 
+  animation: bounceShadow var(--bounceSpeed) infinite ease-out;
+}
 
 @keyframes bounceShadow {
   0%, 100% {
     transform: scale(1);
+    opacity: 1;
   }
   50% {
     animation-timing-function: ease-in;
     transform: scale(2);
+    opacity: 0.5;
   }
 }
 
