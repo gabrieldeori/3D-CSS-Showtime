@@ -68,6 +68,14 @@ translateZ sempre é 1em.
     translateZ(1em);
 }
 
+.cube .top {
+  background-color: rgba(0, 255, 255, 0.5);
+  height: 2em;
+  position: absolute;
+  transform: translateY(-50%) rotateX(90deg);
+  width: 2em;
+}
+
 .floor {
   background-image: repeating-conic-gradient(
     from 45deg,
