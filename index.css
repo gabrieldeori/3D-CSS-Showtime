@@ -1,27 +1,35 @@
-main {
+body {
   align-items: center;
   background-color: black;
   display: flex;
   font-size: 75px;
   justify-content: center;
   min-height: 100vh;
+  perspective: 10em;
+  perspective-origin: 50% calc(50% - 2em);
 }
-
 
 .scene {
   position: relative;
+  transform-style: preserve-3d;
 }
 
 .ball {
   background-color: white;
   border-radius: 50%;
+  bottom: 1em;
   height: 1em;
+  left: -0.5em;
+  position: absolute;
   width: 1em;
 }
 
 .cube {
   background-color: rgba(0, 255, 255, 0.5);
   height: 2em;
+  left: -1em;
+  position: absolute;
+  top: -1em;
   width: 2em;
 }
 
@@ -32,6 +40,9 @@ main {
     #222 90deg 180deg
   );
   background-size: 1em 1em;
-  height: 5em;
-  width: 5em;
+  height: 15em;
+  position: absolute;
+  top: 1em;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  width: 15em;
 }
