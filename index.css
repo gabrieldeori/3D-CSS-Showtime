@@ -16,6 +16,12 @@ body {
 
 .ball {
   background-color: white;
+  background-image: radial-gradient(
+    circle at top,
+    white 15%,
+    50%,
+    black 90%
+  );
   border-radius: 50%;
   bottom: 1em;
   height: 1em;
@@ -23,6 +29,15 @@ body {
   position: absolute;
   width: 1em;
   transform-style: preserve-3d;
+}
+
+.ball__shadow {
+  background-image: radial-gradient(
+    #000a, #0000 50%
+  );
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 .cube {
