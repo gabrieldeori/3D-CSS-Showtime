@@ -2,7 +2,7 @@ main {
   align-items: center;
   background-color: black;
   display: flex;
-  font-size: 50px;
+  font-size: 75px;
   justify-content: center;
   min-height: 100vh;
 }
@@ -21,6 +21,6 @@ main {
 
 .cube {
   background-color: rgba(0, 255, 255, 0.5);
-  height: 3em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
 }
