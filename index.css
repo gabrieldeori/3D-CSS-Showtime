@@ -24,3 +24,10 @@ main {
   height: 2em;
   width: 2em;
 }
+
+.floor {
+  background-image: repeating-conic-gradient(from 45deg, #111 0 90deg, #222 90deg 180deg);
+  background-size: 1em 1em;
+  height: 5em;
+  width: 5em;
+}
