@@ -15,9 +15,9 @@ Escolhi o Vercel pela facilidade de colocar o projeto no ar, com poucos cliques 
     - box-shadow:
       - inset para uma espécie de efeito HBAO
       - outset no bottom para sombras
-      - radial-gradient aplicando circle at top para fazer a bola.
-      - radial-gradient para aplicar efeito de iluminação no chão.
-        No caso desenhando sombra no chão 
+    - radial-gradient
+      - aplicando circle at top para fazer a bola.
+      - efeito de iluminação no chão. No caso desenhando sombra no chão.
   - Técnicas de construção de padrões utilizando:
     - repeating-conic-gradient
   - Técnicas para suavização de animação
