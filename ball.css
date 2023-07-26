@@ -1,0 +1,23 @@
+.ball {
+  animation:
+    ballBounce var(--bounceSpeed) infinite ease-out,
+    sceneRotation var(--rotateSpeed) infinite linear reverse;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 1em;
+  height: 1em;
+  left: -0.5em;
+  position: absolute;
+  width: 1em;
+  transform-style: preserve-3d;
+}
+
+@keyframes ballBounce {
+  0%, 100% {
+    bottom: 0.5em;
+  }
+  50% {
+    animation-timing-function: ease-in;
+    bottom: 3em;
+  }
+}

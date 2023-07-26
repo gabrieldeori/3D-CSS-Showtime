@@ -1,0 +1,60 @@
+.ball {
+  background-image: radial-gradient(
+    circle at top,
+    white,
+    black
+  );
+}
+
+.ball__shadow {
+  animation: bounceShadow var(--bounceSpeed) infinite ease-out;
+  background-image: radial-gradient(
+    #000a, #0000 50%
+  );
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.floor {
+  background-image:
+  radial-gradient(#5552, #000 60%),
+  repeating-conic-gradient(
+    from 45deg,
+    #333 0 90deg,
+    #ddd 90deg 180deg
+  );
+}
+
+.cube .left, .cube .right, .cube .front, .cube .back, .cube .top {
+  background-color: var(--PRIMARY_COLOR);
+  box-shadow: 0 0 0.1em 0.05em #4003 inset;
+}
+
+.cube .bottom {
+  animation: decreaseShadow var(--bounceSpeed) infinite ease-out;
+  background-color: #3008;
+  box-shadow: 0 0 0.3em 0.5em #2007;
+}
+
+@keyframes bounceShadow {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes decreaseShadow {
+  0%, 100% {
+    box-shadow: 0 0 0.2em 0.3em #3008;
+  }
+  6%, 94% {
+    box-shadow: 0 0 0.3em 0.5em #2007;
+    animation-timing-function: ease-in;
+  }
+}

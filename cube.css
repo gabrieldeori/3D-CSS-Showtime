@@ -1,0 +1,97 @@
+/*
+A rotação é feita pela origem do elemento, observe que
+translateZ sempre é 1em.
+*/
+
+.cube .left, .cube .right, .cube .front, .cube .back, .cube .bottom, .cube .top {
+  align-items: center;
+  background-color: blue;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.cube .front {
+  transform: translateZ(1em);
+}
+
+.cube .right {
+  transform:
+    rotateY(90deg)
+    translateZ(1em);
+}
+
+.cube .back {
+  transform:
+    rotateY(180deg)
+    translateZ(1em);
+}
+
+.cube .left {
+  transform:
+    rotateY(270deg)
+    translateZ(1em);
+}
+
+.cube .top {
+  height: 2em;
+  position: absolute;
+  transform: translateY(-50%) rotateX(90deg);
+  width: 2em;
+}
+
+.cube .bottom {
+  bottom: 0;
+  height: 2em;
+  position: absolute;
+  transform: translateY(50%) rotateX(90deg);
+  width: 2em;
+}
+
+.cube {
+  animation: cubeBounce var(--bounceSpeed) infinite linear;
+  height: 2em;
+  left: -1em;
+  position: absolute;
+  bottom: -1em;
+  width: 2em;
+  transform-style: preserve-3d;
+}
+
+.cube a {
+  color: white;
+  font-size: 0.35em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cube img {
+  animation: imgBounce var(--bounceSpeed) infinite linear;
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@keyframes cubeBounce {
+  0%, 100% {
+    height: 1.5em;
+  }
+  6%, 94% {
+    height: 2em;
+  }
+}
+
+@keyframes imgBounce {
+  0%, 100% {
+    height: 1em;
+  }
+  6%, 94% {
+    height: 1.5em;
+  }
+}

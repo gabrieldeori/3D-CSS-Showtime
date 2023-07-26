@@ -1,0 +1,16 @@
+body {
+  perspective: 15em;
+  perspective-origin: 50% calc(50% - 5em);
+}
+
+.scene {
+  animation: sceneRotation var(--rotateSpeed) infinite linear;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+@keyframes sceneRotation {
+  to{
+    transform: rotateY(360deg);
+  }
+}

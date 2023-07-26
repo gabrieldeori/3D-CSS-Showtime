@@ -1,0 +1,9 @@
+.floor {
+  background-color: orange;
+  background-size: 100%, 1em 1em;
+  height: 15em;
+  position: absolute;
+  top: 1em;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  width: 15em;
+}
