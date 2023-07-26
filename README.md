@@ -5,6 +5,7 @@ Esse repositório foi usado como estudo de caso de como aplicar técnicas CSS qu
 ## Quer ver o projeto rodando?
 O projeto pode ser acessado em sua última build através deste [link no vercel](https://3d-css-showtime.vercel.app/).
 
+
 Escolhi o Vercel pela facilidade de colocar o projeto no ar, com poucos cliques um resultado satisfatório para o estudo é alcançado.
 
 ## O que foi aprendido
