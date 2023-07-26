@@ -1,6 +1,6 @@
 # 3D-CSS-Showtime
 ## Introdução
-Esse repositório foi usado como estudo de caso de como aplicar técnicas CSS que trazem como resultado efeitos 3D, não só na intenção de criar ilusão de posicionamento em 3 dimensões, mas também emular shaders (iluminação, sombras, e cores) e pra finalizar criar um tipo arcaico de simulação.
+Esse repositório foi usado como estudo de caso de como aplicar técnicas CSS que trazem como resultado efeitos 3D, não só na intenção de criar ilusão de posicionamento em 3 dimensões, mas também emular shaders (iluminação, sombras, e cores) e pra finalizar criar um tipo arcaico de simulação de física.
 
 ## Quer ver o projeto rodando?
 O projeto pode ser acessado em sua última build através deste [link](https://vercel.com/gabrieldeori/3d-css-showtime)
